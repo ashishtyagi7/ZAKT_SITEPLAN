@@ -1,0 +1,5 @@
+@EndUserText.label: 'Service Definition for Site plan'
+define service ZAKT_PROD_STO_E_SD {
+  expose ZAKT_PROD_STO_E_DD as siteplan;
+  expose ZAKT_STO_E_DD as sto;
+}

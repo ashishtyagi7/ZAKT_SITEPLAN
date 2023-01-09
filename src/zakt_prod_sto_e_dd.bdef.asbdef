@@ -1,0 +1,16 @@
+managed;// implementation in class zbp_akt_prod_sto_e_dd unique;
+//strict ( 1 );
+
+define behavior for ZAKT_PROD_STO_E_DD alias siteplan//alias <alias_name>
+persistent table zakt_prod_ord//<???>
+lock master
+//authorization master ( global )
+//etag master <field_name>
+{
+field( readonly ) matnr,quantity,sto_quan,ord_endda,sto_req_date;
+ // create;
+ // update;
+ // delete;
+ //association _sto { create; } //{ readonly };
+
+}

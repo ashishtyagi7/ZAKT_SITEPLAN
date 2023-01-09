@@ -1,0 +1,23 @@
+managed ;// implementation in class zbp_akt_prod_ord_dd unique;
+//strict ( 1 ); //Uncomment this line in order to enable strict mode 2. The strict mode has two variants (strict(1), strict(2)) and is prerequisite to be future proof regarding syntax and to be able to release your BO.
+
+define behavior for ZAKT_PROD_ORD_DD alias ZAKTPROD//alias <alias_name>
+persistent table ZAKT_PROD_ORD
+lock master
+//authorization master ( instance )
+//etag master <field_name>
+{
+field( mandatory : create ) ORDNUM,MATNR,QUANTITY,ORD_BEGDA,ORD_ENDDA;
+
+  create;
+  update;
+  delete;
+
+  mapping for ZAKT_PROD_ORD{
+  ORDNUM  =  ORDNUM;
+  MATNR  = MATNR;
+  QUANTITY  = QUANTITY;
+  ORD_BEGDA  = ORD_BEGDA;
+  ORD_ENDDA = ORD_ENDDA;
+}
+}

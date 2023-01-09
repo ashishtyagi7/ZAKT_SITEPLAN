@@ -1,0 +1,4 @@
+@EndUserText.label: 'ZAKT_STO_DATA Service Defination'
+define service ZAKT_STO_DATA_SD {
+  expose ZAKT_STO_DATA_DD as stodata;
+}

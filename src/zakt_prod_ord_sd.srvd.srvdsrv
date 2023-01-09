@@ -1,0 +1,4 @@
+@EndUserText.label: 'Production Order Service Definition'
+define service ZAKT_PROD_ORD_SD {
+  expose ZAKT_PROD_ORD_DD as ZAKTPROD;
+}
